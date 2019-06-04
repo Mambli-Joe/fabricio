@@ -472,7 +472,6 @@ input[type="checkbox"]:checked + label:before {
 
 .features-block i {
   font-size: 50px;
-  color: #507fe1;
 }
 
 @media (max-width: 991px) {
@@ -765,6 +764,75 @@ input[type="checkbox"]:checked + label:before {
   .price-card {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+}
+
+.step {
+  text-align: center;
+  position: relative;
+}
+
+.step__title {
+  font-size: 18px;
+}
+
+.step__text {
+  max-width: 160px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.step:before {
+  content: '';
+  width: 40%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: block;
+  position: absolute;
+  top: 15%;
+  right: -20%;
+}
+
+.step:last-child:before {
+  display: none;
+}
+
+.step i {
+  font-size: 50px;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.steps-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+  .step {
+    width: 33%;
+  }
+  .step:before {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .step {
+    width: 50%;
+  }
+}
+
+@media (max-width: 991px) {
+  .step {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

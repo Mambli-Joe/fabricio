@@ -1,0 +1,46 @@
+.step
+    text-align: center
+    position: relative
+    &__title
+        font-size: 18px
+    &__text
+        max-width: 160px
+        margin: auto
+        margin-bottom: 30px
+    &:before
+        content: ''
+        width: 40%
+        height: 2px
+        background-color: rgba(black, 0.8)
+        display: block
+        position: absolute
+        top: 15%
+        right: -20%
+    &:last-child:before
+       display: none
+    i
+        font-size: 50px
+        border: 1px solid black
+        padding: 20px
+        border-radius: 3px
+    &s
+        &-block
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+
+
+@media (max-width: 991px)
+    .step
+        width: 33%
+        &:before
+            display: none
+    
+
+@media (max-width: 991px)
+    .step
+        width: 50% 
+
+@media (max-width: 991px)
+    .step
+        width: 100%     
