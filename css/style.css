@@ -343,12 +343,20 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .offer-block {
-  background: #fff url(../img/offer/offer-bg.png) no-repeat center right;
-  background-size: contain;
   padding: 80px;
   margin-top: -200px;
   -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
           box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.offer-block_calc-bg {
+  background: #fff url(../img/offer/offer-calc-bg.png) no-repeat center right;
+  background-size: contain;
+}
+
+.offer-block_price-bg {
+  background: #fff url(../img/offer/offer-price-bg.png) no-repeat center right;
+  background-size: contain;
 }
 
 .offer__title {
@@ -362,13 +370,14 @@ input[type="checkbox"]:checked + label:before {
   display: block;
   font-size: 21px;
   margin-bottom: 48px;
+  max-width: 800px;
 }
 
 .offer .form__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -404,11 +413,37 @@ input[type="checkbox"]:checked + label:before {
   width: 100%;
 }
 
+.offer .form__policy {
+  display: inline-block;
+  margin-left: 45px;
+  font-size: 17px;
+}
+
+@media (max-width: 1199px) {
+  .offer__subtitle {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 991px) {
+  .offer__subtitle {
+    max-width: 550px;
+  }
+  .form__policy {
+    display: none !important;
+  }
+}
+
 @media (max-width: 768px) {
   .offer-block {
-    background: none;
     padding: 40px;
     margin-top: -300px;
+  }
+  .offer-block_calc-bg, .offer-block_price-bg {
+    background: none;
+  }
+  .offer-block_price-bg {
+    margin-top: -100px;
   }
   .offer__title {
     font-size: 18px;
@@ -436,9 +471,18 @@ input[type="checkbox"]:checked + label:before {
   .form__input {
     margin-bottom: 20px;
   }
+  .form__policy {
+    display: block !important;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 0 !important;
+  }
 }
 
 @media (max-width: 360px) {
+  .form {
+    text-align: center;
+  }
   .form__row-checkbox {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -449,6 +493,10 @@ input[type="checkbox"]:checked + label:before {
     -ms-flex-item-align: start;
         align-self: flex-start;
     margin-bottom: 20px;
+  }
+  .form__button-price {
+    font-size: 13px;
+    padding: 20px 5px;
   }
 }
 
@@ -821,22 +869,11 @@ input[type="checkbox"]:checked + label:before {
 
 @media (max-width: 991px) {
   .step {
-    width: 33%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
   .step:before {
     display: none;
-  }
-}
-
-@media (max-width: 991px) {
-  .step {
-    width: 50%;
-  }
-}
-
-@media (max-width: 991px) {
-  .step {
-    width: 100%;
   }
 }
 
@@ -888,5 +925,56 @@ input[type="checkbox"]:checked + label:before {
   border: 2px solid #6a99e9;
   border-radius: 60%;
   margin: 20px auto;
+}
+
+.factory-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.factory-block__image {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+}
+
+.factory-block__text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  font-size: 20px;
+}
+
+.factory-block__text p:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .factory-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .factory-block__image, .factory-block__text {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .factory-block__image img, .factory-block__text img {
+    width: 100%;
+  }
+  .factory-block__text {
+    margin-top: 20px;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
