@@ -1037,4 +1037,95 @@ input[type="checkbox"]:checked + label:before {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
+
+.footer {
+  padding: 40px 0;
+  background-color: #262626;
+  color: #fff;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__title {
+  text-transform: uppercase;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.footer__subtitle {
+  display: block;
+  margin-bottom: 48px;
+}
+
+.footer-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__pay-info {
+  text-align: center;
+}
+
+.footer__pay-info i {
+  font-size: 50px;
+  margin: 10px;
+}
+
+.footer-social i {
+  font-size: 50px;
+}
+
+.footer__copy {
+  color: #767676;
+}
+
+.footer__contacts {
+  text-align: right;
+}
+
+.footer__phone {
+  font-size: 20px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer__mail {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer-social i {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 360px) {
+  .footer-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .footer__contacts {
+    text-align: center;
+  }
+  .footer__pay-info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .footer__subtitle {
+    margin-bottom: 10px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
